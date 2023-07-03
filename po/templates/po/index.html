@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>index</h1>
+    {% for post in posts %}
+    [{{post.id}}] <a href="{% url 'po:detail' post.id %}">{{post.title}}</a>
+    <p>작성자 {{post.user}}</p>
+    <hr>
+    {% endfor %}
+
+{% endblock %}
